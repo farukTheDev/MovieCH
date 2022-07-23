@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -217,36 +216,50 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peN-4w-WfR">
                                 <rect key="frame" x="32" y="389" width="350" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bağlantı Hatası !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-jt-UbT">
-                                        <rect key="frame" x="101.5" y="52" width="147.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bağlantı Hatası !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-jt-UbT">
+                                        <rect key="frame" x="0.0" y="36" width="350" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                         <color key="textColor" name="Text Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-lr-IBq">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btf-W2-1Cq">
                                         <rect key="frame" x="270" y="88" width="64" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-lr-IBq">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="Gij-1p-kdo"/>
+                                                    <constraint firstAttribute="height" constant="32" id="ZZN-No-IpV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                                <color key="textColor" name="Text Black"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" name="Yellow"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="Gij-1p-kdo"/>
-                                            <constraint firstAttribute="height" constant="32" id="ZZN-No-IpV"/>
+                                            <constraint firstItem="b2V-lr-IBq" firstAttribute="centerX" secondItem="btf-W2-1Cq" secondAttribute="centerX" id="3Na-ff-tBz"/>
+                                            <constraint firstItem="b2V-lr-IBq" firstAttribute="centerY" secondItem="btf-W2-1Cq" secondAttribute="centerY" id="RcQ-aR-iM8"/>
+                                            <constraint firstAttribute="height" constant="32" id="WOU-ts-veo"/>
+                                            <constraint firstAttribute="width" constant="64" id="XMC-wu-e1e"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                                        <color key="textColor" name="Text Black"/>
-                                        <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </label>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="b2V-lr-IBq" secondAttribute="bottom" constant="8" id="9as-aO-lWb"/>
-                                    <constraint firstAttribute="trailing" secondItem="b2V-lr-IBq" secondAttribute="trailing" constant="16" id="YZc-bX-RPi"/>
-                                    <constraint firstItem="5e4-jt-UbT" firstAttribute="centerY" secondItem="peN-4w-WfR" secondAttribute="centerY" id="ghi-90-Xl0"/>
+                                    <constraint firstItem="5e4-jt-UbT" firstAttribute="leading" secondItem="peN-4w-WfR" secondAttribute="leading" id="PJq-NQ-hjN"/>
+                                    <constraint firstAttribute="trailing" secondItem="btf-W2-1Cq" secondAttribute="trailing" constant="16" id="c0E-rh-1no"/>
+                                    <constraint firstAttribute="bottom" secondItem="btf-W2-1Cq" secondAttribute="bottom" constant="8" id="feD-qa-0it"/>
+                                    <constraint firstAttribute="trailing" secondItem="5e4-jt-UbT" secondAttribute="trailing" id="hRm-qs-SPH"/>
                                     <constraint firstItem="5e4-jt-UbT" firstAttribute="centerX" secondItem="peN-4w-WfR" secondAttribute="centerX" id="kk2-W6-KJI"/>
                                     <constraint firstAttribute="height" constant="128" id="x8A-Ra-ceV"/>
+                                    <constraint firstItem="btf-W2-1Cq" firstAttribute="top" secondItem="5e4-jt-UbT" secondAttribute="bottom" constant="28" id="xWu-UJ-VYe"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -303,8 +316,5 @@
         <namedColor name="Yellow">
             <color red="0.96078431372549022" green="0.77254901960784317" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
