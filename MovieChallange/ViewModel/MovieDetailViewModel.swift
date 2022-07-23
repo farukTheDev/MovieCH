@@ -23,6 +23,7 @@ class MovieDetailViewModel: NSObject {
                        success: { movie in
             self.title = movie.title
             self.overView = movie.overview + movie.overview + movie.overview + movie.overview + movie.overview
+            /* Since overview text are too short to proof scrollview works, I have added same text to itself multiple times.*/
             self.poster = movie.getFullPosterPath()
             self.date = movie.getFormattedReleaseDate()
             self.rate = String(format: "%.1f", movie.vote_average)
