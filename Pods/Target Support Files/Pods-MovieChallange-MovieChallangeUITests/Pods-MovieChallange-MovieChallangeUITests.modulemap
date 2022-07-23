@@ -1,0 +1,6 @@
+framework module Pods_MovieChallange_MovieChallangeUITests {
+  umbrella header "Pods-MovieChallange-MovieChallangeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

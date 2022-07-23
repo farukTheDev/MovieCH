@@ -1,0 +1,6 @@
+framework module Pods_MovieChallange {
+  umbrella header "Pods-MovieChallange-umbrella.h"
+
+  export *
+  module * { export * }
+}
